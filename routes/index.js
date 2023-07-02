@@ -1,6 +1,7 @@
 const router= require('express').Router();
 const Controller= require('../controllers/controllerData');
 
-router.use('/read', Controller.getData)
+router.get('/read', Controller.getData)
+router.get('/read/:id', Controller.getDataByCategories)
 
 module.exports= router
