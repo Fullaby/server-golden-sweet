@@ -1,5 +1,5 @@
 'use strict';
-const fs= require('fs');
+const fs = require('fs');
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
@@ -12,11 +12,11 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-   let data= JSON.parse(fs.readFileSync('./data.json','utf-8')).data
+   let data= JSON.parse(fs.readFileSync('./data.json','utf-8')).categories
    data.forEach(el=>{
-    el.createdAt=el.updatedAt = new Date()
+    el.createdAt=el.updatedAt=new Date()
    })
-   await queryInterface.bulkInsert("dataCollections",data)
+   await queryInterface.bulkInsert('categories',data)
   },
 
   async down (queryInterface, Sequelize) {
@@ -26,6 +26,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-   await queryInterface.bulkDelete("dataCollections",null)
+    await queryInterface.bulkDelete("categories",null)
   }
 };
