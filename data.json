@@ -3,17 +3,32 @@
     {
       "name": "test",
       "description": "sedap",
-      "price": 2000
+      "price": 2000,
+      "categoriesId": 2
     },
     {
       "name": "halo",
       "description": "mantap",
-      "price": 1000
+      "price": 1000,
+      "categoriesId": 1
     },
     {
       "name": "hi",
       "description": "hebat",
-      "price": 3000
+      "price": 3000,
+      "categoriesId": 2
+    }
+  ],
+  "categories": [
+    {
+      "name": "Birthday"
+    },
+    {
+      "name": "Wedding"
+    },
+    {
+      "name": "Fathers Day"
     }
   ]
+  
 }
